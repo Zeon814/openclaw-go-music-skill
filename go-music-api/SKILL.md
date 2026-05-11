@@ -36,7 +36,7 @@ powershell -ExecutionPolicy Bypass -File scripts/search-song.ps1 -Query "Jay Cho
 Get a playback URL:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File scripts/get-play-url.ps1 -Id "228908" -Source "kuwo"
+powershell -ExecutionPolicy Bypass -File scripts/get-play-url.ps1 -Id "228908" -Source "kuwo" -Name "晴天" -Artist "周杰伦"
 ```
 
 Get lyrics:
@@ -64,6 +64,7 @@ Play:
 2. Choose the best-ranked result or the user-selected result.
 3. Run `scripts/get-play-url.ps1`.
 4. Prefer the local `stream_url` for playback because it is more stable than a temporary upstream direct link.
+5. If the current source is not playable, pass `Name` and `Artist` so the script can try `/switch` automatically.
 
 Download:
 
